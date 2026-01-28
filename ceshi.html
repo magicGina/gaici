@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>测试截图</title>
+<style>
+
+</style>
+</head>
+<body>
+<!-- 目标 DOM：需要转为图片的容器 -->
+<div id="targetDom" style="width: 300px; height: 200px; background: #f5f5f5; padding: 20px;">
+  <h2>基础截图示例</h2>
+  <p>这是要转为图片的内容</p>
+  <img id="bg1" src="picture/hei.jpg" crossorigin="Anonymous">
+</div>
+  <button id="btn" class="button2">保存名单</button>
+<!-- 图片预览容器 -->
+<img id="previewImg" style="margin-top: 20px; max-width: 100%;" />
+</body>
+</html>
+<script src="js/html2canvas.min.1.js"></script>
+<script>
+document.querySelector('#btn').addEventListener('click', async () => {
+  // 1. 获取目标 DOM
+  const targetDom = document.getElementById('targetDom');
+  
+  // 2. 调用 html2canvas 生成 Canvas
+  const canvas = await html2canvas(targetDom, {
+    scale: 2, // 2倍缩放，避免图片模糊（关键参数）
+    useCORS: true, // 允许跨域图片（如网络图片）
+    logging: false, // 关闭控制台日志
+    backgroundColor: null // 保留 DOM 原有背景（默认白色）
+  });
+  
+  // 3. Canvas 转为 Base64 图片（支持 jpeg/png）
+  const base64Img = canvas.toDataURL('image/jpeg', 1.0); // 1.0 表示质量（0-1）
+  
+  // 4. 预览图片
+  document.getElementById('previewImg').src = base64Img;
+  
+  // 5. （可选）下载图片
+  const link = document.createElement('a');
+  link.href = base64Img;
+  link.download = '基础截图.jpg';
+  link.click();
+});
+</script>

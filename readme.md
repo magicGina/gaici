@@ -1,0 +1,1 @@
+用于桌游模拟器tabletop simulator图包等表格状图片的改词

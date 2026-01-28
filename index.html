@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>做词卡</title>
+<style>
+@font-face {
+            font-family: 'jingnanmaiyuanti';
+            src: url('font/jingnanmaiyuanti.ttf');
+        }
+@font-face {
+            font-family: 'daimengshouxieti';
+            src: url('font/daimengshouxieti.otf');
+        }
+@font-face {
+            font-family: 'hututi';
+            src: url('font/hututi.otf');
+        }
+@font-face {
+            font-family: 'xiaozhitiao';
+            src: url('font/xiaozhitiao.ttf');
+        }
+  #all {
+    width: 5124px; 
+	height: 3586px;
+   /*display: none;*/
+  }
+  #bg1 {
+  }
+  .table-container {
+  position:absolute;
+    width: 5124px; 
+	height: 3586px;
+	left:0px;
+	top:0px;
+	text-align: center;
+	font-family: 'jingnanmaiyuanti', sans-serif;
+  }
+  .good-table{
+    width: 100%; 
+	height: 100%;
+	table-layout: fixed;
+	border-collapse:collapse;
+	color: white;
+  }
+  .good-table td{
+  /*border: 1px solid red;*/
+  padding-bottom:20px;
+  padding-left:10px;
+  }
+  .good-word-box{
+	/*display:inline-block;*/
+	/*background-color: red;*/
+	width: 700px; 
+	height: 400px;
+	word-break: break-all;
+	overflow:hidden;
+	font-size:200px;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	}
+	
+	.btn_box{
+        width : 2124px;
+        text-align: center;
+		font-size:100px;
+		background-color:#c0c1bc;
+		padding-bottom:50px;
+        padding-top:10px;
+		position:absolute;
+		left:0px;
+		top:0px;
+    }
+    .txt{
+        min-height : 2000px;
+        width : 80%;
+        border-radius: 4px;
+        display: inline-block;
+		font-size:100px;
+		
+    }
+    .input_name_bar{
+        width:80%;
+        text-align: left;
+        display: inline-block;
+    }
+    .button2{
+		width:40%;
+		height:200px;;
+        background-color: #a88985; /* Green */
+        border: none;
+        border-radius: 5px;
+        color: white;
+        text-align: center;
+		justify-content: center;
+		align-items: center;
+        text-decoration: none;
+        display: inline-block;
+		font-size:100px;
+		margin-bottom:20px;
+    }
+    .button2:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+
+</style>
+</head>
+<body>
+<div id = "all">
+<img id="bg1" src="picture/hei.jpg" crossorigin="Anonymous" >
+<div class="table-container">
+<table id="my-good-table" class="good-table">
+<tr>
+<td><div class="good-word-box">记忆</div></td>
+<td><div class="good-word-box">恐吓</div></td>
+<td><div class="good-word-box">欧洲</div></td>
+<td><div class="good-word-box">探险</div></td>
+<td><div class="good-word-box">驾驶</div></td>
+<td><div class="good-word-box">幻想</div></td>
+<td><div class="good-word-box">禁食</div></td>
+</tr>
+
+<tr>
+<td><div class="good-word-box">错误</div></td>
+<td><div class="good-word-box">度假屋</div></td>
+<td><div class="good-word-box">节日</div></td>
+<td><div class="good-word-box">跳蚤市场</div></td>
+<td><div class="good-word-box">运动</div></td>
+<td><div class="good-word-box">法国</div></td>
+<td><div class="good-word-box">和平</div></td>
+</tr>
+<tr>
+<td><div class="good-word-box">春天</div></td>
+<td><div class="good-word-box">生日派对</div></td>
+<td><div class="good-word-box">危险</div></td>
+<td><div class="good-word-box">监狱</div></td>
+<td><div class="good-word-box">土著</div></td>
+<td><div class="good-word-box">几何</div></td>
+<td><div class="good-word-box">历史</div></td>
+</tr>
+
+<tr>
+<td><div class="good-word-box">潮汐</div></td>
+<td><div class="good-word-box">有毒</div></td>
+<td><div class="good-word-box">信仰</div></td>
+<td><div class="good-word-box">快乐</div></td>
+<td><div class="good-word-box">挖掘</div></td>
+<td><div class="good-word-box">大峡谷</div></td>
+<td><div class="good-word-box">丑陋</div></td>
+</tr>
+
+<tr>
+<td><div class="good-word-box">避难所</div></td>
+<td><div class="good-word-box">想家</div></td>
+<td><div class="good-word-box">秋天</div></td>
+<td><div class="good-word-box">喜马拉雅山</div></td>
+<td><div class="good-word-box">洞穴绘画</div></td>
+<td><div class="good-word-box">地狱</div></td>
+<td><div class="good-word-box">秋千椅</div></td>
+</tr>
+
+<tr>
+<td><div class="good-word-box">蜂窝</div></td>
+<td><div class="good-word-box">宠物学校</div></td>
+<td><div class="good-word-box">辐照</div></td>
+<td><div class="good-word-box">日本</div></td>
+<td><div class="good-word-box">超越</div></td>
+<td><div class="good-word-box">记者</div></td>
+<td><div class="good-word-box">周年纪念日</div></td>
+</tr>
+
+<tr>
+<td><div class="good-word-box">食人</div></td>
+<td><div class="good-word-box">狂欢节</div></td>
+<td><div class="good-word-box">口香糖</div></td>
+<td><div class="good-word-box">托儿所</div></td>
+<td><div class="good-word-box">黏糊</div></td>
+<td><div class="good-word-box">攀爬架</div></td>
+<td><div class="good-word-box">爬</div></td>
+</tr>
+</table>
+</div>
+</div>
+
+<div id="gongjulan" class="btn_box">
+    <div class="input_name_bar">&nbsp;词表：</div>
+    <textarea id="input_txt" class="txt"></textarea><br/>
+    <button id="btn1" class="button2">提取图上文字</button>
+    <button id="btn2" class="button2">搞到图上</button>
+	<br/>
+	<button id="btn5" class="button2">黑/白</button>
+    <button id="btn6" class="button2">图像质量:0</button>
+	<br/>
+	<button id="btn3" class="button2">隐藏（空格）</button>
+	<button id="btn4" class="button2">转jpg</button>
+</div>
+</body>
+</html>
+<script src="js/html2canvas.min.1.js"></script>
+<script>
+var show_quality=0;
+window.onload=function() {
+	tiqv();
+	document.getElementById('btn1').onclick = function(){
+	tiqv();
+	}; 
+	document.getElementById('btn2').onclick = function(){
+	fangzhi();
+	};
+	document.getElementById('btn3').onclick = function(){
+	document.getElementById("gongjulan").style.display = "none";
+	};
+	document.addEventListener('keydown', function(event) {
+    if (event.key === " ") {
+        console.log("空格键被按下");
+		if(document.getElementById("gongjulan").style.display == "none"){
+		document.getElementById("gongjulan").style.display = "block";
+		}else{
+		document.getElementById("gongjulan").style.display = "none";
+		}
+    }
+	});
+	document.querySelector('#btn4').addEventListener('click', async () => {
+	  // 1. 获取目标 DOM
+	  const targetDom = document.getElementById('all');
+	  
+	  // 2. 调用 html2canvas 生成 Canvas
+	  const canvas = await html2canvas(targetDom, {
+		scale: 1, // 2倍缩放，避免图片模糊（关键参数）
+		useCORS: true, // 允许跨域图片（如网络图片）
+		allowTaint: true,
+		logging: false, // 关闭控制台日志
+		backgroundColor: null // 保留 DOM 原有背景（默认白色）
+	  });
+	  
+	  // 3. Canvas 转为 Base64 图片（支持 jpeg/png）
+	  const base64Img = canvas.toDataURL('image/jpeg', show_quality*0.1); // 1.0 表示质量（0-1）
+	  
+	  // 5. （可选）下载图片
+	  const link = document.createElement('a');
+	  link.href = base64Img;
+	  link.download = '词板.jpg';
+	  link.click();
+	});
+	document.getElementById('btn5').onclick = function(){
+		var src = document.getElementById('bg1').src.slice(-7);
+		if(src == "hei.jpg"){
+		document.getElementById('bg1').src="picture/bai.jpg";
+		document.getElementById("my-good-table").style.color = "black";
+		}else{
+		document.getElementById('bg1').src="picture/hei.jpg";
+		document.getElementById("my-good-table").style.color = "white";
+		}
+	};
+	document.getElementById('btn6').onclick = function(){
+		
+		if(show_quality<10){
+		show_quality+=1;
+		}else{
+		show_quality=0;
+		}
+		document.getElementById('btn6').innerText="图像质量:"+show_quality;
+	};
+}
+function tiqv() {
+	var words = [];
+
+	// 获取表格中的所有td元素
+	var table = document.getElementById('my-good-table');
+	var tds = table.getElementsByTagName('td'); // 或者使用 table.querySelectorAll('td')
+
+	// 遍历td元素并获取内容
+	for (var i = 0; i < tds.length; i++) {
+		words.push(tds[i].innerText);
+	}
+	document.getElementById('input_txt').value=words;
+}
+function fangzhi(){
+	var input_mingdan = document.getElementById('input_txt').value;
+	var huamingce_raw = splitStr(input_mingdan,',，;；|\n\t\r .。');
+	var words = huamingce_raw.filter(item => item.trim().length > 0);
+	// 获取表格中的所有td元素
+	var table = document.getElementById('my-good-table');
+	var tds = table.getElementsByTagName('td'); // 或者使用 table.querySelectorAll('td')
+
+	// 遍历td元素并获取内容
+	for (var i = 0; i < tds.length; i++) {
+		if(i<words.length){
+			tds[i].firstElementChild.innerHTML=words[i];
+		}
+	}
+}
+function splitStr(inputStr, separator) {
+	const regEx = new RegExp(`[${separator}]`, 'g');
+	const arr = inputStr.split(regEx);
+
+	return arr;
+}
+</script>
